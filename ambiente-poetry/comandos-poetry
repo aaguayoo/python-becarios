@@ -1,0 +1,44 @@
+Poetry no sirve para crear ambientes "pequeños" con instalaciones de paquetes de Python
+muy específicos a nuestros requerimientos.
+
+Poetry por sí mismo es un paquete de python
+
+$ pip install poetry
+
+1. Inicialización de ambiente
+
+$ poetry init -n
+
+Esto crea un archivo `pyproject.toml` dentro de la carpeta. El cual se puede abrir con
+algún editor de texto como ViM. Si no se tiene instalado correr el comando:
+
+$ sudo apt install vim
+
+2. Veamos el pyproject:
+    - Secciones delimitadas por [seccion]
+        - [tool.poetry]: Info sobre el ambiente
+        - [tool.poetry.dependencies]: Enlista las dependencias con sus versiones
+        - [build-system]: Se ponen los requerimientos para construir el ambiente.
+
+3. Instalar paquetes
+
+Correr el siguiente comando en la carpeta que contenga el pyproject.toml (archivo de configuración)
+
+$ poetry add <paquete>
+
+El <paquete> debe tener el mismo nombre que como se instala con pip, es decir, como se
+encuentre en la página de PyPi https://pypi.org/
+
+Al momento de instalar paquetes, Poetry hace lo siguiente:
+
+
+4. Fijar versión de Python
+
+    - Abrimos el pyproject.toml con vim
+    - Modificamos la línea con la dependencia python = "*"
+        python = ">=3.10,<3.13"
+
+
+5. Entrar al ambiente
+
+$ poetry shell

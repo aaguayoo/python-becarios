@@ -1,0 +1,37 @@
+ViM es un editor de texto que no utiliza entorno gráfico, es decir, funciona
+directamente en la terminal.
+
+1. Abrir archivo 
+
+$ vim archivo
+
+2. Dentro de ViM tenemos los siguientes modos de uso:
+
+    NORMAL: se puede manipular el archivo completo
+    usando `mapping` que son comandos de ViM
+    INSERTAR
+    VISUAL
+
+3. Comenzar a escribir - Entrar al modo INSERTAR:
+
+    - i: Empezamos a escribir donde está el cursor
+    - a: Empezamos a escribir en una posición adelante.
+    - A: Empezamos a escribir al final de la línea.
+    - I: Empezamos a escribir al inicio de la línea.
+    - o: Empezamos a escribir en una nueva línea por debajo.
+    - O: Empezamos a escribir en una nueva línea por encima.
+
+4. Salir del modo insertar - Regresar al modo NORMAL
+
+    - <ESC>: Regresa al modo normal
+
+5. Salir del archivo
+
+    - <ESC> - Asegurarnos de que estamos en el modo NORMAL
+    - :wq - Guardamos (w) y salimos del archivo (q).
+    - :q - Si no fue modificado el archivo y solo queremos sallir (q).
+    - :q! - Si fue modificado pero queremos salir sin guardar.
+    - :wq! - Para salir y guardar todo.
+
+
+
